@@ -1,0 +1,23 @@
+.styled-div{}
+
+
+.styled-div h4{
+    color:white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.styled-div h5{
+    color: white;
+    text-align: center;
+}
+
+.styled-div p {
+    color: white;
+    text-align: center;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+}

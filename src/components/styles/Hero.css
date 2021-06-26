@@ -1,0 +1,4 @@
+.flexible-col{
+    display:flex;
+    justify-content: center;
+}
