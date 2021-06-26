@@ -2,15 +2,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState} from 'react'
 import Login from './components/Login'
-import Hero from './components/Hero'
+import HeroList from './components/HeroList'
 import React from 'react'
-import HeroDetails from './components/HeroDetails'
-
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-
 } from 'react-router-dom'
 
 
@@ -23,26 +20,22 @@ export const App = () => {
 
   return (
     <Router>
-        <div className="App">
-          <Switch>
-          {user ? (
-            <Hero/>
-          ): (
-              <Route path="/">
-                <Login 
-                email={email} 
-                setEmail={setEmail} 
-                password={password} 
-                setPassword={setPassword} 
-                setUser={setUser}/>
-              </Route>
-          )}
-
-              <Route path="hero-details">
-              <HeroDetails/>
-            </Route>
-            </Switch>
-        </div>
+      <Switch>
+        <Route path='/'>
+      <div className="App">
+            {user ? (
+                <HeroList/>
+            ): (
+                  <Login 
+                  email={email} 
+                  setEmail={setEmail} 
+                  password={password} 
+                  setPassword={setPassword} 
+                  setUser={setUser}/>
+            )}
+          </div>
+          </Route>
+        </Switch>
     </Router>
   )
 }
